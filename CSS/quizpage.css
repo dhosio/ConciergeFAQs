@@ -156,38 +156,26 @@ input[type="radio"], input[type="checkbox"]{
 
 }
 
-div.answer{
-    width: 75%;
-    border: 1px solid #CDB090;
-    border-radius: 3px;
-    margin: 10px auto;
-    background-color: white;
-    cursor: pointer;
+/* To style the question 3 input field */
+#inputAnswer{
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    caret-color: #CDB090;
 }
 
-div.answer:hover{
-    width: 77%;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 10px auto;
-    color: white;
-    background-color: #7cb918;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.emptyField{
+    border: 2px dashed red;
 }
 
-p.answerText{
-    padding: 5px;
-}
-
-div.nextButton {
+div.nextButton, div.checkButtonContainer {
     margin: 10px;
     padding: 10px;
     display: flex;
     justify-content: end;
 }
 
-#nextButton{
+#nextButton, .checkButton{
     margin: 5px;
     padding: 7px;
     border: 1px solid #7cb918;
@@ -199,7 +187,7 @@ div.nextButton {
     letter-spacing: 2px;
 }
 
-#nextButton:hover {
+#nextButton:hover, .checkButton:hover{
     margin: 5px;
     padding: 7px;
     border: 1px solid white;
@@ -207,6 +195,23 @@ div.nextButton {
     background-color: #6ba310;
     color: white;
     transition: all 0.4s ease-in-out;
+}
+
+/* Feedback Section CSS */
+div.feedback{
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #70604f71;
+    background-color: rgba(199, 199, 199, 0.8);
+}
+
+span.important{
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 768px) {

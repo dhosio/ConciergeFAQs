@@ -79,7 +79,7 @@
 
                     <h4 id="questionNumber">Question 1</h4>
 
-                    <p id="questionContent">This is where the question will be</p>
+                    <p id="questionContent">What is the name of the concierge?</p>
 
                 </div>
 
@@ -87,32 +87,47 @@
 
                     <label for="choice1A" class="optionContainer">
                         <div id="choiceA">
-                            <input type="radio" id="choice1A" class="answerText" data-number="1" name="choice" value="A">
-                            Choice 1
+                            <input type="radio" id="choice1A" class="answerText" data-number="1" name="choice"
+                                value="Dhosio Githiomi">
+                            Dhosio Githiomi
                         </div>
                     </label>
 
                     <label for="choice1B" class="optionContainer">
                         <div id="choiceB">
-                            <input type="radio" id="choice1B" class="answerText" data-number="2" name="choice" value="B">
-                            Choice 2
+                            <input type="radio" id="choice1B" class="answerText" data-number="2" name="choice"
+                                value="Daniel Githiomi">
+                            Daniel Githiomi
                         </div>
                     </label>
 
                     <label for="choice1C" class="optionContainer">
                         <div id="choiceC">
-                            <input type="radio" id="choice1C" class="answerText" data-number="3" name="choice" value="C">
-                            Choice 3
+                            <input type="radio" id="choice1C" class="answerText" data-number="3" name="choice"
+                                value="Dhosio Regency">
+                            Dhosio Regency
                         </div>
                     </label>
 
                     <label for="choice1D" class="optionContainer">
                         <div id="choiceD">
-                            <input type="radio" id="choice1D" class="answerText" data-number="4" name="choice" value="D">
-                            Choice 4
+                            <input type="radio" id="choice1D" class="answerText" data-number="4" name="choice"
+                                value="Daniel Kempinski">
+                            Daniel Kempinski
                         </div>
                     </label>
 
+                </div>
+
+                <div class="checkButtonContainer">
+                    <input type="submit" class="checkButton" value="Check">
+                </div>
+
+                <!-- Feedback Section -->
+                <div id="feedback1" class="feedback" hidden>
+                    <p>The name of the concierge is <span class="important">Dhosio Regency</span> and <span
+                            class="important">Daniel Githiomi</span> is the name of our founder! The rest just don't
+                        exist!</p>
                 </div>
 
             </div>
@@ -123,7 +138,10 @@
 
                     <h4 id="questionNumber">Question 2</h4>
 
-                    <p id="questionContent">This is where the question will be</p>
+                    <p id="questionContent">Dhosio Regency Concierge offers which of the following services?
+                        <br>
+                        <span class="important">[Select all 3 that apply]</span>
+                    </p>
 
                 </div>
 
@@ -131,32 +149,48 @@
 
                     <label for="choice2A" class="optionContainer">
                         <div id="choiceA">
-                            <input type="checkbox" id="choice2A" class="answerText" data-number="1" name="chbxChoice" value="A">
-                            Choice 1
+                            <input type="checkbox" id="choice2A" class="answerText" data-number="1" name="chbxChoice"
+                                value="Lifestyle Management">
+                            Lifestyle Management
                         </div>
                     </label>
 
                     <label for="choice2B" class="optionContainer">
                         <div id="choiceB">
-                            <input type="checkbox" id="choice2B" class="answerText" data-number="2" name="chbxChoice" value="B">
-                            Choice 2
+                            <input type="checkbox" id="choice2B" class="answerText" data-number="2" name="chbxChoice"
+                                value="Hotel Booking">
+                            Hotel Booking
                         </div>
                     </label>
 
                     <label for="choice2C" class="optionContainer">
                         <div id="choiceC">
-                            <input type="checkbox" id="choice2C" class="answerText" data-number="3" name="chbxChoice" value="C">
-                            Choice 3
+                            <input type="checkbox" id="choice2C" class="answerText" data-number="3" name="chbxChoice"
+                                value="Corporate Concierge">
+                            Corporate Concierge
                         </div>
                     </label>
 
                     <label for="choice2D" class="optionContainer">
                         <div id="choiceD">
-                            <input type="checkbox" id="choice2D" class="answerText" data-number="4" name="chbxChoice" value="D">
-                            Choice 4
+                            <input type="checkbox" id="choice2D" class="answerText" data-number="4" name="chbxChoice"
+                                value="Private Touring">
+                            Private Touring
                         </div>
                     </label>
-                    
+
+                </div>
+
+                <div class="checkButtonContainer">
+                    <input type="submit" class="checkButton" value="Check">
+                </div>
+
+                <!-- Feedback Section -->
+                <div id="feedback2" class="feedback" hidden>
+                    <p>Dhosio Regency concierge offers a wide range of services including <span
+                            class="important">Lifestyle Management</span>, <span class="important">Corporate
+                            Concierge</span> and <span class="important">Private Touring</span> but not Hotel Booking
+                    </p>
                 </div>
 
             </div>
@@ -167,8 +201,13 @@
 
                     <h4 id="questionNumber">Question 3</h4>
 
-                    <p id="questionContent">This is where the question will be </p> <input type="text" id="inputAnswer" class="inputField"
-                        name="inputAnswer" placeholder="answer goes here"> 
+                    <p id="questionContent"> <span class="important">[Choose an option and type it in]</span>
+                        <br> <br>
+                        Complete the company motto:
+                        <br>
+                        Your <input type="text" id="inputAnswer" class="inputAnswer" name="inputAnswer"
+                            placeholder="answer goes here">, our Top Priority
+                    </p>
 
                 </div>
 
@@ -176,32 +215,45 @@
 
                     <label for="choice3A" class="optionContainer">
                         <div id="choiceA">
-                            <input type="radio" id="choice3A" class="answerText" data-number="1" name="inputChoice" value="A">
-                            Choice 1
+                            <input type="radio" id="choice3A" class="answerText" data-number="1" name="inputChoice"
+                                value="Comfort">
+                            Comfort
                         </div>
                     </label>
 
                     <label for="choice3B" class="optionContainer">
                         <div id="choiceB">
-                            <input type="radio" id="choice3B" class="answerText" data-number="2" name="inputChoice" value="B">
-                            Choice 2
+                            <input type="radio" id="choice3B" class="answerText" data-number="2" name="inputChoice"
+                                value="Relaxation">
+                            Relaxation
                         </div>
                     </label>
 
                     <label for="choice3C" class="optionContainer">
                         <div id="choiceC">
-                            <input type="radio" id="choice3C" class="answerText" data-number="3" name="inputChoice" value="C">
-                            Choice 3
+                            <input type="radio" id="choice3C" class="answerText" data-number="3" name="inputChoice"
+                                value="Pleasure">
+                            Pleasure
                         </div>
                     </label>
 
                     <label for="choice3D" class="optionContainer">
                         <div id="choiceD">
-                            <input type="radio" id="choice3D" class="answerText" data-number="4" name="inputChoice" value="D">
-                            Choice 4
+                            <input type="radio" id="choice3D" class="answerText" data-number="4" name="inputChoice"
+                                value="Freedom">
+                            Freedom
                         </div>
                     </label>
-                    
+
+                </div>
+
+                <div class="checkButtonContainer">
+                    <input type="submit" class="checkButton" value="Check">
+                </div>
+
+                <!-- Feedback Section -->
+                <div id="feedback3" class="feedback" hidden>
+                    <p>Dhosio Regency concierge motto is: Your <span class="important">comfort</span>, Our Top Priority!</p>
                 </div>
 
             </div>
@@ -212,7 +264,7 @@
 
                     <h4 id="questionNumber">Question 4</h4>
 
-                    <p id="questionContent">This is where the question will be</p>
+                    <p id="questionContent">In which major city is the Headquaters of Dhosio Regency located?</p>
 
                 </div>
 
@@ -221,13 +273,23 @@
                     <label for="choice4A" class="optionContainer">
                         <!-- For the drop down menu -->
                         <select id="dropDown" class="dropDown" name="qn4DropDown">
-                            <option value="Choice 1">Choice 1</option>
-                            <option value="Choice 2">Choice 2</option>
-                            <option value="Choice 3">Choice 3</option>
-                            <option value="Choice 4">Choice 4</option>
+                            <option value="Choice 1">Select...</option>
+                            <option value="Kisumu City">Kisumu City</option>
+                            <option value="Nairobi City">Nairobi City</option>
+                            <option value="Mombasa City">Mombasa City</option>
+                            <option value="Eldoret City">Eldoret City</option>
                         </select>
                     </label>
 
+                </div>
+
+                <div class="checkButtonContainer">
+                    <input type="submit" class="checkButton" value="Check">
+                </div>
+
+                <!-- Feedback Section -->
+                <div id="feedback4" class="feedback" hidden>
+                    <p>We are located at: <span class="important">2nd Floor, Plasma Building, Nairobi, Kenya</span></p>
                 </div>
 
             </div>
@@ -239,10 +301,10 @@
                     <h4 id="questionNumber">Question 5</h4>
 
                     <p id="questionContent">This is where the question will be</p>
-    
-                        <div id="dropLocation" class="dropDiv">
-                            <!-- Where to drop the answer -->
-                        </div>
+
+                    <div id="dropLocation" class="dropDiv">
+                        <!-- Where to drop the answer -->
+                    </div>
 
                 </div>
 
@@ -250,80 +312,57 @@
 
                     <label for="choice5A" class="draggableContainer" draggable="true" id="dragItem">
                         <div id="choiceA">
-                            <input type="radio" id="choice5A" class="answerText" data-number="1" name="dragChoice" value="A">
+                            <input type="radio" id="choice5A" class="answerText" data-number="1" name="dragChoice"
+                                value="A">
                             Choice A
                         </div>
                     </label>
 
                     <label for="choice5B" class="draggableContainer" draggable="true">
                         <div id="choiceB">
-                            <input type="radio" id="choice5B" class="answerText" data-number="1" name="dragChoice" value="B">
+                            <input type="radio" id="choice5B" class="answerText" data-number="1" name="dragChoice"
+                                value="B">
                             Choice B
                         </div>
                     </label>
 
                     <label for="choice5C" class="draggableContainer" draggable="true">
                         <div id="choiceC">
-                            <input type="radio" id="choice5C" class="answerText" data-number="1" name="dragChoice" value="C">
+                            <input type="radio" id="choice5C" class="answerText" data-number="1" name="dragChoice"
+                                value="C">
                             Choice C
                         </div>
                     </label>
 
                     <label for="choice5D" class="draggableContainer" draggable="true">
                         <div id="choiceD">
-                            <input type="radio" id="choice5D" class="answerText" data-number="1" name="dragChoice" value="D">
+                            <input type="radio" id="choice5D" class="answerText" data-number="1" name="dragChoice"
+                                value="D">
                             Choice D
                         </div>
                     </label>
 
                 </div>
 
+                <div class="checkButtonContainer">
+                    <input type="submit" class="checkButton" value="Check">
+                </div>
+
+                <!-- Feedback Section -->
+                <div id="feedback" class="feedback" hidden>
+                    <p>The name of the concierge is <span class="important">Dhosio Regency</span> and <span
+                            class="important">Daniel Githiomi</span> is the name of our founder! The rest just don't
+                        exist!</p>
+                </div>
+
             </div>
 
+
+            <!-- Next Question -->
             <div class="nextButton">
                 <input type="submit" id="nextButton" value="Next">
             </div>
 
-        </div>
-
-        <!-- Results Content -->
-        <div class="resultsContainer">
-
-            <div class="resultContainer" id="rs1" hidden>
-
-                <div class="question">
-
-                    <h4 id="questionNumber">Feedback 1</h4>
-
-                    <p id="questionContent">Question feedback</p>
-
-                </div>
-
-                <div class="answers">
-
-                    <div id="choiceA" class="optionContainer">
-                        <p class="answerPrefix">A)</p>
-                        <input type="radio" class="answerText" data-number="1" value="A">Choice 1</input>
-                    </div>
-
-                    <div id="choiceB" class="optionContainer">
-                        <p class="answerPrefix">B)</p>
-                        <input type="radio" class="answerText" data-number="2" value="B">Choice 2</input>
-                    </div>
-
-                    <div id="choiceC" class="optionContainer">
-                        <p class="answerPrefix">C)</p>
-                        <input type="radio" class="answerText" data-number="3" value="C">Choice 3</input>
-                    </div>
-
-                    <div id="choiceD" class="optionContainer">
-                        <p class="answerPrefix">D)</p>
-                        <input type="radio" class="answerText" data-number="4" value="D">Choice 4</input>
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
 

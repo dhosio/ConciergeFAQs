@@ -43,6 +43,11 @@ let nextButton = document.querySelector('#nextButton');
     let questionNumber = 1;
     let score = 0;
 
+    // HUD to show user progress
+    let progressText = document.querySelector('#progressText')
+    let progressBar = document.querySelector('#progressBarFull')
+    let scoreText = document.querySelector('#score')
+
     // Adding the event listener
     nextButton.addEventListener('click', (event) => {
 
@@ -97,11 +102,7 @@ let nextButton = document.querySelector('#nextButton');
 
             } else {
 
-                // Showing user progress
-                let progressText = document.querySelector('#progressText')
-                let progressBar = document.querySelector('#progressBarFull')
-                let scoreText = document.querySelector('#score')
-
+                // To alter the HUD and show user progress
                 progressText.innerText = `Question ${questionNumber} of ${MAX_QUESTIONS}`
                 progressBar.style.width = `${ (questionNumber/MAX_QUESTIONS) * 100 }%`
                 scoreText.innerText = ++score;

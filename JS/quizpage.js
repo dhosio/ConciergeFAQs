@@ -4,7 +4,7 @@ const MAX_QUESTIONS = 5;
 const QUESTION_SCORE = 1;
 
 // Select all div choices
-let allChoiceDivs = document.querySelectorAll('div[class~=optionContainer]')
+let allChoiceDivs = document.querySelectorAll('label[class~=optionContainer]')
 
     // Set a click handler on each div
     for (let choiceDiv of allChoiceDivs){
@@ -20,10 +20,15 @@ function choiceClickHandler(event){
     let parent = currentDiv.parentElement;
     let children = parent.children;
 
-    for (let child of children){
-        if (child.className === "optionContainer"){
-            child.removeAttribute("style");
+    // Remove only previously selected option from all except checkboxes
+    if ( questionNumber !== 2 ){
+
+        for (let child of children){
+            if (child.className === "optionContainer"){
+                child.removeAttribute("style");
+            }
         }
+        
     }
 
     // To set the background color of the selected option
@@ -35,6 +40,56 @@ function choiceClickHandler(event){
     choiceSelected = true;
 
 }
+
+// This is for the drag and drop functionality
+
+    // Get all the draggable items
+    const draggableElements = document.querySelectorAll('.draggableContainer');
+
+    // To get the drop zone
+    const dropZone = document.querySelector('#dropLocation')
+
+    // Then add an event listener
+    for ( const draggableElement of draggableElements ){
+
+        draggableElement.addEventListener('dragstart', event => {
+            event.dataTransfer.setData("text", draggableElement.id)
+        })
+
+        // Adding drag over event listener
+        dropZone.addEventListener("dragover", e => {
+            // Prevent default behaviour
+            e.preventDefault();
+
+            // Adding the style class to the drop zone
+            dropZone.classList.add("dragZone--over");
+        })
+
+        // When the item is not in the drag zone
+        dropZone.addEventListener("dragleave", e => {
+            dropZone.classList.remove("dragZone--over");
+        })
+
+        // Adding the drop listener
+        dropZone.addEventListener("drop", e => {
+            // Prevent default behaviour
+            e.preventDefault();
+
+            // To actually move the element
+            const droppedElementId = e.dataTransfer.getData("text");
+            const droppedElement = document.getElementById(droppedElementId);
+
+            if (dropZone.child == null){
+                dropZone.appendChild(droppedElement);
+                dropZone.classList.remove("dragZone--over");
+            }else {
+                dropZone.replaceChild(droppedElement);
+            }
+            
+        })
+
+    }
+
 
 // Setting an event listener to the 'Next' Button
 let nextButton = document.querySelector('#nextButton');
@@ -56,7 +111,7 @@ let nextButton = document.querySelector('#nextButton');
 
         if ( !choiceSelected ){
 
-            // Sweet Alert to show choice not selected
+            // Sweet Alert to show choice not selected for all except question 3
             swal({
                 title: 'Error!',
                 text: 'You must select an answer before proceeding',
@@ -65,10 +120,81 @@ let nextButton = document.querySelector('#nextButton');
 
         }else {
 
-            // Get the answer selected by the user
-            const currentForm = document.forms[questionNumber];
-            const chosenAnswer = currentForm.elements.option.value;
-            alert(chosenAnswer)
+            if (questionNumber === 1){
+
+                // Get the answer selected by the user
+                // const currentForm = document.forms.qn1ChoiceForm;
+                // const chosenAnswer = currentForm.elements.choice.value;
+
+                const answer = document.querySelector('input[name="choice"]:checked').value;
+                
+                // Check if the chossen answer is correct
+                let correctAnswer = "C"
+
+                if ( answer === correctAnswer ){
+                    alert("Correct")
+                }else{
+                    alert("Incorrect")
+                }
+
+            }else if (questionNumber === 2){
+
+                // To get the checkboxes by their name
+                const allCheckboxes = document.getElementsByName('chbxChoice');
+
+                // Loop through each checkbox and get the value
+                const checkboxValues = [];
+
+                for ( let index = 0; index < allCheckboxes.length; index++ ){
+                    // Check if the checkbox is checked
+                    const checkbox = allCheckboxes[index];
+                    if ( checkbox.checked === true ){
+                        const value = checkbox.value;
+                        // Add value to the array
+                        checkboxValues.push( value.toString() );
+                    }
+                }
+
+                // Correct checkbox values
+                const correctCheckboxValues = ["A", "C", "D"];
+
+                if (JSON.stringify(checkboxValues) == JSON.stringify(correctCheckboxValues)) {
+                    alert("Correct");
+                }else {
+                    alert("Incorrect");
+                }
+
+            }else if ( questionNumber === 3 ){
+
+                // Get the value of the choice choice selected
+                const inputAnswer = document.getElementById('inputAnswer').value;
+                alert(inputAnswer);
+
+                const correctAnswer1 = "Dhosio";
+                const correctAnswer2 = "dhosio";
+
+                if ( inputAnswer === correctAnswer1 || inputAnswer === correctAnswer2 ){
+                    alert("Correct")
+                }else {
+                    alert("Incorrect")
+                }
+                
+            }else if ( questionNumber === 4 ){
+
+                // To get the selected drop down option
+                const dropDownOption = document.querySelector('#dropDown').value;
+                alert(dropDownOption);
+
+                // Check if the answer is correct
+                const correctDropDownAnswer = "Daniel";
+                
+                if ( dropDownOption === correctDropDownAnswer){
+                    alert("Correct")
+                }else {
+                    alert("Incorrect")
+                }
+
+            }
 
             // Get the div that contains the current question
             const currentQuestionDiv = document.getElementById(`qn${questionNumber}`);

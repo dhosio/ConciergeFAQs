@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee&family=Eater&family=Fredericka+the+Great&family=IM+Fell+DW+Pica+SC&family=Love+Ya+Like+A+Sister&family=Luckiest+Guy&family=Markazi+Text&family=Niconne&family=Patrick+Hand+SC&family=Tajawal:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../Images/BackgroundImage.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+div.header{
+    background-color: #CDB090;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#websiteLogo{
+    border-radius: 50px;
+    margin: 10px;
+}
+
+h1.websiteName, p.websiteMoto{
+    font-family: 'IM Fell DW Pica SC', serif;
+    margin: 10px;
+    text-align: center;
+}
+
+button.nav-link{
+    color: black;
+    margin: 3px;
+}
+
+button.nav-link:hover{
+    color: #CDB090;
+    transition: all 0.2 ease-in-out;
+}
+
+/* Home Page Css */
+div.questions_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#questions_button{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #7cb918;
+    border-radius: 3px;
+    background-color: #7cb918;
+    color: white;
+}
+
+#questions_button:hover {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #6ba310;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Contact Form Css */
+div.survey_form{
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #CDB090;
+}
+
+div.survey_form h4{
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px dotted #CDB090;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    font-size: 20px;
+    margin: 3px;
+}
+
+span.label{
+    width: 100%;
+    padding: 6px;
+    margin: 3px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #CDB090;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+select{
+    width: 30%;
+    padding: 5px;
+    margin: 3px;
+    border: 2px solid #CDB090;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input[type="radio"]{
+    padding: 10px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+input[type="checkbox"]{
+    padding: 10px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+input[type="textarea"]{
+    width: 100%;
+    height: 150px;
+    border: 2px solid #CDB090;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+div.buttons{
+    width: 100%;
+    margin: 7px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+/* About Us Css */
+h2.headers{
+    color: #CDB090;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    margin-top: 40px;
+    letter-spacing: 3px;
+}
+
+h2.headers:after{
+    content: '';
+    background: #CDB090;
+    width: 400px;
+    display: block;
+    height: 3px;
+    margin: 10px auto;
+}
+
+p.why_content{
+    text-align: center;
+    margin: 10px;
+    padding: 60px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #424242;
+    background-color: transparent;
+}
+
+p.why_content:hover{
+    text-align: center;
+    margin: 10px;
+    padding: 60px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+span.name{
+    font-weight: bold;
+    color: black;
+}
+
+div.team_content{
+    height: 500px;
+    background-color: #333333;
+    background-image: url(../Images/daniel_githiomi.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px;
+    margin: 30px 100px 0 100px;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+div.team_content_text{
+    width: 60%;
+    background-color: transparent;
+}
+
+p.teamperson_name{
+    width: 50%;
+    background-color: transparent;
+    font-style: italic;
+    color: #CDB090;
+    padding: 5px;
+    margin: 10px 0;
+    border-bottom: 1px dashed #fff;
+    font-size: 33px;
+    font-weight: bold;
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+p.teamperson_title{
+    background-color: transparent;
+    font-style: italic;
+    color: #FFF;
+    margin: 20px 0;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Love Ya Like A Sister', 'cursive';
+}
+
+p.teamperson_content{
+    background-color: transparent;
+    color: #FFF;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    font-style: none;
+}
+
+a.contact_info{
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+a.contact_info:hover{
+    background-color: transparent;
+    color: #CDB090;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+/* For Google Maps*/
+#googleMap{
+    width: 85%;
+    height: 400px;
+    margin: 30px auto;  
+    border: 1px solid #CDB090;
+    border-radius: 5px;
+}
+
+/* Footer Css */
+footer{
+    background-image: url(../Images/Tile.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    margin: 0;
+}
+
+div.footer{
+    background-color: transparent;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.footer_body{
+    display: flex;
+    background-color: transparent;
+}
+
+div.footer_body_item{
+    background-color: transparent;
+    margin: 15px;
+    padding: 10px;
+}
+
+h5.footer_header{
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 2px solid #CDB090;
+}
+
+div.footer_body_item ul{
+    background-color: transparent;
+    margin: 10px;
+}
+
+div.footer_body_item ul li, div.footer_body_item ul li a{
+    list-style: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    padding: 5px 7px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+div.footer_body_item ul li:hover, div.footer_body_item ul li a:hover{
+    list-style: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: #CDB090;
+    padding: 5px 7px;
+    letter-spacing: 2px;
+}
+
+div.socials{
+    background-color: #CDB090;
+    color:#FFFFFF;
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p.socials_header{
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+ol.social_links{
+    background-color: transparent;
+    float: right;
+}
+
+ol.social_links a{
+    background-color: transparent;
+}
+
+img.social_link{
+    background-color: transparent;
+    margin: 5px;
+    padding: 5px;
+}
+
+img.social_link:hover{
+    background-color: #333333;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    transition: all 0.8s ease 0s;
+}

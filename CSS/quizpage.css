@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee&family=Eater&family=Fredericka+the+Great&family=IM+Fell+DW+Pica+SC&family=Love+Ya+Like+A+Sister&family=Luckiest+Guy&family=Markazi+Text&family=Niconne&family=Nova+Square&family=Patrick+Hand+SC&family=Tajawal:wght@500&display=swap');
+/* Parent CSS is in landingpage.css file */
+
+/* Quiz Page CSS */
+div.quizContainer, div.resultContainer{
+    width:50%;
+    margin: 20px auto;
+    border: 2px solid #CDB090;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-attachment: fixed;
+}
+
+/* Heads Up Display */
+#hud{
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hudPrefix{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Love Ya Like A Sister', 'cursive';
+}
+
+.hudMainText{
+    text-align: center;
+    color: #CDB090;
+    font-family: 'Love Ya Like A Sister', 'cursive';
+    font-weight: bold;
+}
+
+/* The progress bar */
+#progressBar{
+    width: 250px;
+    height: 35px;
+    border: 2px solid #CDB090;
+    margin: 10px;
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressBarFull{
+    height: 100%;
+    background-color: #CDB090;
+    width: 0%;
+}
+
+div.question{
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #cdae9071;
+    background-color: rgba(245, 245, 245, 0.7);
+}
+
+h4#questionNumber{
+    font-family: 'Love Ya Like A Sister', 'cursive';
+    font-size: 40px;
+    margin: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+h4#questionNumber:after{
+    content: '';
+    background: #CDB090;
+    width: 80%;
+    display: block;
+    height: 2px;
+    margin: 5px auto;
+}
+
+div.answers{
+    text-align: center;
+    margin: 10px;
+}
+
+div.optionContainer{
+    display: flex;
+    width: 70%;
+    text-align: center;
+    border: 1px solid #CDB090;
+    background-color: white;
+    margin: 5px auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+div.optionContainer:hover{
+    cursor: pointer;
+    box-shadow: 0px 2px 1px 0px rgb(205, 176, 144, 0.5);
+    transform: scale(1.03);
+    transform: transform 500ms;
+}
+
+.answerPrefix{
+    padding: 0px 10px;
+    font-family: 'Nova Square', 'cursive';
+    font-weight: bold;
+}
+
+.answerText{
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* To highlight the correct answer */
+.correct{
+    color: white;
+    font-weight: bold;
+    font-family: 'Love Ya Like A Sister', 'cursive';
+    background: linear-gradient(32deg, rgb(2, 165, 21) 0%, rgb(10, 143, 58) 100%);
+}
+
+/* For the incorrect answer */
+.incorrect{
+    color: white;
+    font-weight: bold;
+    font-family: 'Love Ya Like A Sister', 'cursive';
+    background: linear-gradient(32deg, rgb(206, 13, 13) 0%, rgb(184, 5, 5) 100%);
+
+}
+
+div.answer{
+    width: 75%;
+    border: 1px solid #CDB090;
+    border-radius: 3px;
+    margin: 10px auto;
+    background-color: white;
+    cursor: pointer;
+}
+
+div.answer:hover{
+    width: 77%;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 10px auto;
+    color: white;
+    background-color: #7cb918;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+p.answerText{
+    padding: 5px;
+}
+
+div.nextButton {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+#nextButton{
+    margin: 5px;
+    padding: 7px;
+    border: 1px solid #7cb918;
+    border-radius: 3px;
+    background-color: #7cb918;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Love Ya Like A Sister', 'cursive';
+    letter-spacing: 2px;
+}
+
+#nextButton:hover {
+    margin: 5px;
+    padding: 7px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #6ba310;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .optionContainer{
+        min-width: 50px;
+    }
+}

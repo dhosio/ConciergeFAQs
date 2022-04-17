@@ -148,7 +148,15 @@ div.buttons{
     padding: 8px;
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
+}
+
+/* Contact Form PHP Output */
+span{
+    font-size: 17px;
+    font-weight: 550;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
 /* About Us Css */

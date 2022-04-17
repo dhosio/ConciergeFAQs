@@ -17,9 +17,27 @@
     <title>DHOSIO REGENCY QUIZ</title>
     <link rel="icon" type="image/jpg" href="../Images/WebsiteLogo.jpg">
 
+    <!-- JS Script -->
+    <script>
+
+        // To show sweet alert when form is filled
+        function submitForm() {
+            // Sweet alert
+            swal ({
+                title: 'Form submitted!',
+                text: 'Thank you for taking time to fill the form. We will get back to you in 3 working days',
+                icon: 'success',
+                button: 'Proceed'
+            })
+        }
+
+    </script>
+
 </head>
 
 <body>
+
+
 
     <?php
   // define variables and set to empty values
@@ -29,6 +47,7 @@
   $gender = "";
   $transportMeans = "";
   $addedInfo = "";
+  $personalMessage = "";
 
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,6 +56,7 @@
     $lastName = $_POST["lastName"];
     $gender = $_POST["gender"];
     $transportMeans = $_POST["transport"];
+    $personalMessage = $_POST["personalMessage"];
 
     if ($firstName == "" || $lastName == ""){
         $fullName = "No names entered.";
@@ -49,8 +69,14 @@
       $gender = "Not provided.";
     }
 
+    // For transport radio buttons
     if($transportMeans == ""){
         $transportMeans = "Must select at least one.";
+    }
+
+    // For the personal message text field
+    if($personalMessage == ""){
+        $personalMessage = "No personalized message.";
     }
 
     // For the checkboxes
@@ -86,7 +112,7 @@
         <!-- The actual form -->
         <div class="survey_form">
 
-            <h4>Kindly fill in the survey below:</h4>
+            <h4>Kindly fill in the contact form below:</h4>
 
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="survey">
 
@@ -130,29 +156,35 @@
                 <input type="textarea" name="personalMessage" id="personalMessage"
                     placeholder="What would you like us to know...">
 
-                    <div class="buttons">
-                        <input type="submit" class="btn btn-success" name="submitButton" id="submitButton" value="Submit" onclick="submitForm()">
-                        <input type="reset" class="btn btn-danger"name="reset" id="clearButton" value="Reset" onclick="clearForm()">
-                    </div>
+                <div class="buttons">
+                    <input type="submit" class="btn btn-success" name="submitButton" id="submitButton" value="Submit" onclick="submitForm()">
+                    <input type="reset" class="btn btn-danger"name="reset" id="clearButton" value="Reset" onclick="clearForm()">
+                </div>
 
             </form>
 
             <!-- Display PHP Output -->
             <?php
 
-      echo "<br>";
-      echo "<h2>Your Details Provided Are :</h2>";
-      echo "<p> Your full name is: <span>" . $fullName . "</span></p>";
-      echo "<br>";
-      echo "<p> Gender: <span>" . $gender. "</span></p>";
-      echo "<br>";
-      echo "<p> Prefered means of transport: <span>" . $transportMeans . "</span></p>";
-      echo "<br>";
-      echo "<p>Your additonal information: <span>" . $addedInfo . "</span></p>";
+            echo "<br>";
+            echo "<h2>Your Details Provided:</h2>";
+            echo '<p> Your full name is: <span style="font-weight:bold; text-decoration:underline;">' . $fullName . '</span></p>';
+            echo "<br>";
+            echo '<p> Gender: <span style="font-weight:bold; text-decoration:underline;">' . $gender. '</span></p>';
+            echo "<br>";
+            echo '<p> Prefered means of transport: <span style="font-weight:bold; text-decoration:underline;">' . $transportMeans . '</span></p>';
+            echo "<br>";
+            echo '<p>Your additonal information: <span style="font-weight:bold; text-decoration:underline;">' . $addedInfo . '</span></p>';
+            echo "<br>";
+            echo '<p>Your personal message to us: <span style="font-weight:bold; text-decoration:underline;">' . $personalMessage . '</span></p>';
+            echo "<br>"; 
+            echo '<p style="font-weight:bold; text-decoration:underline; text-align:center;"> We will get back to you in 3 working days! </p>';  
 
-      ?>
+            ?>
 
         </div>
+
+    </div>
 
         <!-- Footer -->
         <footer>

@@ -139,9 +139,9 @@
 
                     <h4 id="questionNumber">Question 2</h4>
 
-                    <p id="questionContent">Dhosio Regency Concierge offers which of the following services?
+                    <p id="questionContent"> Dhosio Regency Concierge offers which of the following services?
                         <br>
-                        <span class="important">[Select all 3 that apply]</span>
+                        <span class="important">[All 3 must be correct for a point]</span>
                     </p>
 
                 </div>
@@ -159,24 +159,24 @@
                     <label for="choice2B" class="optionContainer">
                         <div id="choiceB">
                             <input type="checkbox" id="choice2B" class="answerText" data-number="2" name="chbxChoice"
-                                value="Hotel Booking">
-                            Hotel Booking
+                                value="Corporate Concierge">
+                            Corporate Concierge
                         </div>
                     </label>
 
                     <label for="choice2C" class="optionContainer">
                         <div id="choiceC">
                             <input type="checkbox" id="choice2C" class="answerText" data-number="3" name="chbxChoice"
-                                value="Corporate Concierge">
-                            Corporate Concierge
+                                value="Private Touring">
+                            Private Touring
                         </div>
                     </label>
 
                     <label for="choice2D" class="optionContainer">
                         <div id="choiceD">
                             <input type="checkbox" id="choice2D" class="answerText" data-number="4" name="chbxChoice"
-                                value="Private Touring">
-                            Private Touring
+                                value="Hotel Booking">
+                            Hotel Booking
                         </div>
                     </label>
 
@@ -202,12 +202,12 @@
 
                     <h4 id="questionNumber">Question 3</h4>
 
-                    <p id="questionContent"> <span class="important">[Choose an option and type it in]</span>
+                    <p id="questionContent"> <span class="important">[Choose an option]</span>
                         <br> <br>
                         Complete the company motto:
                         <br>
                         Your <input type="text" id="inputAnswer" class="inputAnswer" name="inputAnswer"
-                            placeholder="answer goes here">, our Top Priority
+                            placeholder="answer goes here" disabled>, our Top Priority
                     </p>
 
                 </div>
@@ -301,45 +301,41 @@
 
                     <h4 id="questionNumber">Question 5</h4>
 
-                    <p id="questionContent">This is where the question will be</p>
-
-                    <div id="dropLocation" class="dropDiv">
-                        <!-- Where to drop the answer -->
-                    </div>
+                    <p id="questionContent">We can be found on all the following social media platforms except?</p>
 
                 </div>
 
                 <div class="answers">
 
-                    <label for="choice5A" class="draggableContainer" draggable="true" id="dragItem">
+                    <label for="choice5A" class="optionContainer">
                         <div id="choiceA">
-                            <input type="radio" id="choice5A" class="answerText" data-number="1" name="dragChoice"
-                                value="A">
-                            Choice A
+                            <input type="radio" id="choice5A" class="answerText" data-number="1" name="dropChoice"
+                                value="Instagram">
+                            Instagram
                         </div>
                     </label>
 
-                    <label for="choice5B" class="draggableContainer" draggable="true">
+                    <label for="choice5B" class="optionContainer">
                         <div id="choiceB">
-                            <input type="radio" id="choice5B" class="answerText" data-number="1" name="dragChoice"
-                                value="B">
-                            Choice B
+                            <input type="radio" id="choice5B" class="answerText" data-number="2" name="dropChoice"
+                                value="Twitter">
+                            Twitter
                         </div>
                     </label>
 
-                    <label for="choice5C" class="draggableContainer" draggable="true">
+                    <label for="choice5C" class="optionContainer">
                         <div id="choiceC">
-                            <input type="radio" id="choice5C" class="answerText" data-number="1" name="dragChoice"
-                                value="C">
-                            Choice C
+                            <input type="radio" id="choice5C" class="answerText" data-number="3" name="dropChoice"
+                                value="LinkedIn">
+                            LinkedIn
                         </div>
                     </label>
 
-                    <label for="choice5D" class="draggableContainer" draggable="true">
+                    <label for="choice5D" class="optionContainer">
                         <div id="choiceD">
-                            <input type="radio" id="choice5D" class="answerText" data-number="1" name="dragChoice"
-                                value="D">
-                            Choice D
+                            <input type="radio" id="choice5D" class="answerText" data-number="4" name="dropChoice"
+                                value="Snapchat">
+                            Snapchat
                         </div>
                     </label>
 
@@ -350,18 +346,19 @@
                 </div>
 
                 <!-- Feedback Section -->
-                <div id="feedback" class="feedback" hidden>
-                    <p>The name of the concierge is <span class="important">Dhosio Regency</span> and <span
-                            class="important">Daniel Githiomi</span> is the name of our founder! The rest just don't
-                        exist!</p>
+                <div id="feedback5" class="feedback" hidden>
+                    <p>We can be found on <span class="important">Instagram</span>, <span class="important">Twitter</span>
+                         and <span class="important">LinkedIn</span>. You can find links to our pages at the bottom. 
+                         We are not yet on Snapchat!
+                        </p>
                 </div>
 
             </div>
 
 
             <!-- Next Question -->
-            <div id="nextButtonContainer" hidden>
-                <input type="submit" id="nextButton" value="Next">
+            <div id="nextButtonContainer">
+                <input type="submit" id="nextButton" value="Next" hidden>
             </div>
 
 

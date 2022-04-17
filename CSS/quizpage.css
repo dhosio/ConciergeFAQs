@@ -115,6 +115,12 @@ label.optionContainer:hover, label.draggableContainer:hover{
 /* To style the drop down list */
 #dropDown{
     width: 100%;
+    border-color: transparent;
+}
+
+option{
+    color: black;
+    font-family: sans-serif;
 }
 
 /* To style the drop location div */
@@ -144,6 +150,7 @@ input[type="radio"], input[type="checkbox"]{
     color: white;
     font-weight: bold;
     font-family: 'Love Ya Like A Sister', 'cursive';
+    letter-spacing: 1.5px;
     background: linear-gradient(32deg, rgb(2, 165, 21) 0%, rgb(10, 143, 58) 100%);
 }
 
@@ -152,8 +159,8 @@ input[type="radio"], input[type="checkbox"]{
     color: white;
     font-weight: bold;
     font-family: 'Love Ya Like A Sister', 'cursive';
+    letter-spacing: 1.5px;
     background: linear-gradient(32deg, rgb(206, 13, 13) 0%, rgb(184, 5, 5) 100%);
-
 }
 
 /* To style the question 3 input field */
@@ -203,7 +210,7 @@ div.feedback{
     margin: 20px;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #70604f71;
+    box-shadow: 2px 2px 2px 2px #50473ed2;
     background-color: rgba(199, 199, 199, 0.8);
 }
 

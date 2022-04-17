@@ -120,7 +120,7 @@ label.optionContainer:hover, label.draggableContainer:hover{
 
 option{
     color: black;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* To style the drop location div */
@@ -149,8 +149,8 @@ input[type="radio"], input[type="checkbox"]{
 .correct{
     color: white;
     font-weight: bold;
-    font-family: 'Love Ya Like A Sister', 'cursive';
-    letter-spacing: 1.5px;
+    font-family: 'Nova Square', 'cursive';
+    letter-spacing: 1px;
     background: linear-gradient(32deg, rgb(2, 165, 21) 0%, rgb(10, 143, 58) 100%);
 }
 
@@ -158,8 +158,8 @@ input[type="radio"], input[type="checkbox"]{
 .incorrect{
     color: white;
     font-weight: bold;
-    font-family: 'Love Ya Like A Sister', 'cursive';
-    letter-spacing: 1.5px;
+    font-family: 'Nova Square', 'cursive';
+    letter-spacing: 1px;
     background: linear-gradient(32deg, rgb(206, 13, 13) 0%, rgb(184, 5, 5) 100%);
 }
 

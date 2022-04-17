@@ -83,6 +83,7 @@
 
         </div>
 
+        <!-- The actual form -->
         <div class="survey_form">
 
             <h4>Kindly fill in the survey below:</h4>
@@ -129,10 +130,10 @@
                 <input type="textarea" name="personalMessage" id="personalMessage"
                     placeholder="What would you like us to know...">
 
-                <div class="buttons">
-                    <input type="submit" name="submitButton" id="submitBtn" value="Submit" onclick="submitForm()">
-                    <input type="reset" name="reset" id="clearBtn" value="Reset" onclick="clearForm()">
-                </div>
+                    <div class="buttons">
+                        <input type="submit" class="btn btn-success" name="submitButton" id="submitButton" value="Submit" onclick="submitForm()">
+                        <input type="reset" class="btn btn-danger"name="reset" id="clearButton" value="Reset" onclick="clearForm()">
+                    </div>
 
             </form>
 

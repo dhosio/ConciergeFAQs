@@ -154,7 +154,7 @@
 
                 <span class="label"> Personal Message: </span> <br>
                 <input type="textarea" name="personalMessage" id="personalMessage"
-                    placeholder="What would you like us to know...">
+                    placeholder="Any further questions not included in the FAQs?">
 
                 <div class="buttons">
                     <input type="submit" class="btn btn-success" name="submitButton" id="submitButton" value="Submit" onclick="submitForm()">

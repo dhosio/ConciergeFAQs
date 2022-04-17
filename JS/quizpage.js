@@ -90,6 +90,9 @@ for (const draggableElement of draggableElements) {
 
 }
 
+// Declaring the 'Next' Button
+let nextButton = document.querySelector('#nextButtonContainer');
+
 // Setting an event listener to the 'Check' Button
 let checkButtons = document.querySelectorAll('.checkButton');
 
@@ -115,17 +118,15 @@ for (let checkButton of checkButtons) {
             // Hide the check button
             checkButton.setAttribute("hidden", "true");
 
-            // Show the Feedback Container and the next button
+            // Show the Feedback Container
             const feedbackContainer = document.querySelector(`#feedback${questionNumber}`);
             feedbackContainer.removeAttribute("hidden");
+            // Also show the Next button
+            nextButton.removeAttribute("hidden");
 
         }
     })
 }
-
-
-// Setting an event listener to the 'Next' Button
-let nextButton = document.querySelector('#nextButton');
 
 // Variable to hold the question number
 let questionNumber = 1;
@@ -284,6 +285,9 @@ nextButton.addEventListener('click', (event) => {
             // Reveal the next question
             const nextQuestionDiv = document.getElementById(`qn${questionNumber}`);
             nextQuestionDiv.removeAttribute("hidden");
+
+            // Re-hide the next button
+            nextButton.setAttribute("hidden", "true");
 
         }
     }

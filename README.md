@@ -4,6 +4,8 @@
 
 A website that will provide frequently asked questions (FAQ) in for a concierge website using a quiz format. The site has an introductory page giving a brief overview of the aims of the site.
 
+Highly recommended that upon downloading the zipped contents of the website, one should have XAMPP software pre-installed in their computer and/or device. After unzipping the content, it should all be moved to the ‘htdocs’ directory in C:/Local Disk (C:)/xampp folder as this is the only way to ensure that the .php files are able to run using the dummy server provided by XAMPP.
+
 Created By: Daniel Githiomi
 
 ## Screenshot

@@ -51,6 +51,6 @@ Contact me through any of the following:
 
 
 ### License
-Click the following to acces the license page: [Click-Here] (https://github.com/githiomi/license/blob/master/LICENSE)
+Click the following to acces the license page: [Click-Here](https://github.com/githiomi/license/blob/master/LICENSE)
 
 Copyright (c) {2022} Dhosio Co.
